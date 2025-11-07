@@ -1,0 +1,144 @@
+.header {
+  background: rgba(10, 14, 39, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: var(--transition);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  transition: var(--transition);
+  min-width: max-content;
+}
+
+.logo:hover {
+  color: var(--primary-accent);
+}
+
+.logoText {
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
+
+.logoSub {
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  color: var(--primary-accent);
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  position: relative;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: var(--transition);
+}
+
+.nav a:hover {
+  color: var(--text-primary);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  width: 30px;
+  padding: 0;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: var(--primary-accent);
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--primary-dark);
+    border-bottom: 1px solid var(--border-color);
+    flex-direction: column;
+    gap: 0;
+    justify-content: flex-start;
+    align-items: stretch;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav a {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+  }
+
+  .nav a::after {
+    display: none;
+  }
+
+  .navOpen {
+    max-height: 500px;
+  }
+
+  .logo {
+    min-width: auto;
+  }
+}

@@ -1,0 +1,340 @@
+.hero {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(255, 0, 110, 0.1) 100%);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 1rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pricingSection {
+  padding: 6rem 0;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.pricingCard {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, rgba(255, 0, 110, 0.05) 100%);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricingCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+}
+
+.cardBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--gradient-primary);
+  color: var(--primary-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pricingCard h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.currency {
+  font-size: 1.2rem;
+  color: var(--primary-accent);
+  font-weight: 600;
+}
+
+.amount {
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.period {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.subtitle {
+  color: var(--text-secondary) !important;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.features {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.features li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.features li:last-child {
+  border-bottom: none;
+}
+
+.features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-accent);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.whatIncluded {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.whatIncluded h3 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.section h4 {
+  color: var(--primary-accent);
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.section ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.section ul li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.section ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary-accent);
+}
+
+.comparisonCard {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.comparisonCard h2 {
+  margin-bottom: 2rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.comparisonList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.comparisonItem {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.comparisonCheck {
+  font-size: 1.5rem;
+  color: var(--primary-accent);
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.comparisonItem h4 {
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.comparisonItem p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.callout {
+  background: rgba(0, 217, 255, 0.1);
+  border: 1px solid var(--primary-accent);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.callout h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.callout p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.callout strong {
+  color: var(--primary-accent);
+  font-size: 1.1rem;
+}
+
+/* FAQ Section */
+.faqSection {
+  padding: 6rem 0;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.faqSection h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.faqItem {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, rgba(255, 0, 110, 0.05) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.faqItem:hover {
+  border-color: var(--primary-accent);
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(255, 0, 110, 0.1) 100%);
+}
+
+.faqItem h3 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.faqItem p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 6rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.15) 0%, rgba(255, 0, 110, 0.15) 100%);
+  border-top: 2px solid var(--primary-accent);
+}
+
+.ctaSection h2 {
+  margin-bottom: 1rem;
+}
+
+.ctaSection p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .pricingGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .pricingCard {
+    padding: 2rem;
+  }
+
+  .price {
+    margin-bottom: 1rem;
+  }
+
+  .amount {
+    font-size: 2.5rem;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricingSection,
+  .faqSection,
+  .ctaSection {
+    padding: 3rem 0;
+  }
+}

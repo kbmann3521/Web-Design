@@ -1,0 +1,374 @@
+.hero {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(255, 0, 110, 0.1) 100%);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 1rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.servicesSection {
+  padding: 6rem 0;
+}
+
+.serviceRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.serviceRow:last-of-type {
+  margin-bottom: 0;
+}
+
+.serviceContent h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.serviceContent p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.serviceList {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.serviceList li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: var(--text-secondary);
+}
+
+.serviceList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary-accent);
+  font-weight: bold;
+}
+
+.emphasis {
+  background: rgba(0, 217, 255, 0.1);
+  border-left: 4px solid var(--primary-accent);
+  padding: 1rem;
+  border-radius: 4px;
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  margin: 0 !important;
+}
+
+.serviceImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagePlaceholder {
+  font-size: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(255, 0, 110, 0.1) 100%);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+}
+
+/* Comparison Section */
+.comparisonSection {
+  padding: 6rem 0;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comparisonSection h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.comparisonTable {
+  display: grid;
+  gap: 1px;
+  background: var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: var(--primary-dark);
+}
+
+.tableRow:first-child {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(255, 0, 110, 0.1) 100%);
+  border: 1px solid var(--border-color);
+}
+
+.tableCell {
+  padding: 1.5rem;
+  border-right: 1px solid var(--border-color);
+  font-weight: 600;
+}
+
+.tableCell:last-child {
+  border-right: none;
+}
+
+.tableRow:first-child .tableCell {
+  border: none;
+  border-right: 1px solid var(--border-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.tableRow:first-child .tableCell:last-child {
+  border-right: none;
+}
+
+/* Wix Comparison Section */
+.wixSection {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, rgba(255, 0, 110, 0.05) 0%, rgba(0, 217, 255, 0.05) 100%);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.wixSection h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionIntro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.wixComparisonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.wixCard {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(255, 0, 110, 0.08) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.wixCard:hover {
+  border-color: var(--primary-accent);
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.12) 0%, rgba(255, 0, 110, 0.12) 100%);
+}
+
+.wixCard h3 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+.wixCard p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.wixCard p:last-child {
+  margin-bottom: 0;
+}
+
+.wixCard strong {
+  color: var(--primary-accent);
+  font-weight: 600;
+}
+
+.wixSummary {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(255, 0, 110, 0.1) 100%);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+}
+
+.wixSummary h3 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+.wixSummary p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.costComparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.costCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.costCard h4 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.costCard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.costCard li {
+  padding: 0.5rem 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.costCard li.total {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--primary-accent);
+  font-size: 1rem;
+}
+
+.savings {
+  font-size: 1.2rem !important;
+  background: rgba(0, 217, 255, 0.15);
+  border-left: 4px solid var(--primary-accent);
+  padding: 1.5rem;
+  border-radius: 4px;
+  color: var(--text-primary) !important;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 6rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.15) 0%, rgba(255, 0, 110, 0.15) 100%);
+  border-top: 2px solid var(--primary-accent);
+}
+
+.ctaSection h2 {
+  margin-bottom: 1rem;
+}
+
+.ctaSection p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .servicesSection {
+    padding: 3rem 0;
+  }
+
+  .serviceRow {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .serviceRow:nth-child(even) .serviceImage {
+    order: -1;
+  }
+
+  .imagePlaceholder {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .comparisonTable {
+    overflow-x: auto;
+  }
+
+  .tableRow {
+    grid-template-columns: 1fr;
+  }
+
+  .tableCell {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .tableCell:last-child {
+    border-bottom: none;
+  }
+
+  .comparisonSection {
+    padding: 3rem 0;
+  }
+
+  .wixSection {
+    padding: 3rem 0;
+  }
+
+  .wixComparisonGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .wixSummary {
+    padding: 2rem;
+  }
+
+  .costComparison {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ctaSection {
+    padding: 3rem 0;
+  }
+}
