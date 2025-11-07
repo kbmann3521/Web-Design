@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-
-export const runtime = 'edge'
+import nodemailer from 'nodemailer'
 
 interface RequestBody {
   contactName: string
@@ -21,77 +20,68 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const apiKey = process.env.BREVO_API_KEY
+    const smtpHost = process.env.ZOHO_SMTP_HOST
+    const smtpUser = process.env.ZOHO_SMTP_USER
+    const smtpPass = process.env.ZOHO_SMTP_PASS
     const businessEmail = 'kyle@highrockieswebdesign.com'
 
-    if (!apiKey) {
-      console.error('BREVO_API_KEY not configured')
+    if (!smtpHost || !smtpUser || !smtpPass) {
+      console.error('Zoho SMTP credentials not configured')
       return NextResponse.json(
         { error: 'Email service not configured' },
         { status: 500 }
       )
     }
 
-    // Send email to business
-    const adminEmailResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
-      method: 'POST',
-      headers: {
-        'api-key': apiKey,
-        'Content-Type': 'application/json',
+    const transporter = nodemailer.createTransport({
+      host: smtpHost,
+      port: 587,
+      secure: false,
+      auth: {
+        user: smtpUser,
+        pass: smtpPass,
       },
-      body: JSON.stringify({
-        to: [{ email: businessEmail }],
-        sender: { name: contactName, email: email },
-        subject: `New Website Request from ${contactName}`,
-        htmlContent: `
-          <h2>New Website Request</h2>
-          <p><strong>Contact Name:</strong> ${escapeHtml(contactName)}</p>
-          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-          <h3>Website Details:</h3>
-          <p>${escapeHtml(websiteIdeas).replace(/\n/g, '<br>')}</p>
-        `,
-      }),
     })
 
-    if (!adminEmailResponse.ok) {
-      console.error('Failed to send admin email:', await adminEmailResponse.text())
-      return NextResponse.json(
-        { error: 'Failed to send email' },
-        { status: 500 }
-      )
-    }
+    // Send email to business
+    await transporter.sendMail({
+      from: businessEmail,
+      to: businessEmail,
+      replyTo: email,
+      subject: `New Website Request from ${contactName}`,
+      html: `
+        <h2>New Website Request</h2>
+        <p><strong>Contact Name:</strong> ${escapeHtml(contactName)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <h3>Website Details:</h3>
+        <p>${escapeHtml(websiteIdeas).replace(/\n/g, '<br>')}</p>
+      `,
+    })
 
     // Send confirmation email to user
-    await fetch('https://api.brevo.com/v3/smtp/email', {
-      method: 'POST',
-      headers: {
-        'api-key': apiKey,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        to: [{ email: email }],
-        sender: { name: 'High Rockies Web Design', email: businessEmail },
-        subject: 'Thanks for Reaching Out - Your Free Website Awaits!',
-        htmlContent: `
-          <h2>Thanks, ${escapeHtml(contactName)}!</h2>
-          <p>We received your website request and we're excited to get started on your free custom website.</p>
+    await transporter.sendMail({
+      from: businessEmail,
+      to: email,
+      subject: 'Thanks for Reaching Out - Your Free Website Awaits!',
+      html: `
+        <h2>Thanks, ${escapeHtml(contactName)}!</h2>
+        <p>We received your website request and we're excited to get started on your free custom website.</p>
 
-          <h3>Here's What Happens Next:</h3>
-          <ol>
-            <li>We'll review your website ideas and vision</li>
-            <li>We'll design a beautiful, custom website tailored to your business</li>
-            <li>You'll get a free website that's 100% yours</li>
-            <li>After launch, we'll manage it for $59/month (hosting & unlimited edits included!)</li>
-          </ol>
+        <h3>Here's What Happens Next:</h3>
+        <ol>
+          <li>We'll review your website ideas and vision</li>
+          <li>We'll design a beautiful, custom website tailored to your business</li>
+          <li>You'll get a free website that's 100% yours</li>
+          <li>After launch, we'll manage it for $59/month (hosting & unlimited edits included!)</li>
+        </ol>
 
-          <p><strong>The Best Part?</strong> You won't have to lift a finger! Once you're a subscriber, you can call anytime with edits or questions.</p>
+        <p><strong>The Best Part?</strong> You won't have to lift a finger! Once you're a subscriber, you can call anytime with edits or questions.</p>
 
-          <p>Look for us to reach out within 24 hours!</p>
+        <p>Look for us to reach out within 24 hours!</p>
 
-          <p>Thanks,<br>
-          High Rockies Web Design</p>
-        `,
-      }),
+        <p>Thanks,<br>
+        High Rockies Web Design</p>
+      `,
     })
 
     return NextResponse.json(
