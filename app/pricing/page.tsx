@@ -7,7 +7,7 @@ export default function Pricing() {
       <section className={styles.hero}>
         <div className="container">
           <h1>Pricing That Makes Sense</h1>
-          <p>Custom-built websites. No bloated templates. Lightning-fast performance. Great for SEO. One honest price for everything.</p>
+          <p>Custom-built websites. No bloated templates. Lightning-fast performance. Great for SEO. One honest price for everything. And most importantly: you're paying for your time back—no more wasting hours on website builders, plugins, and hosting.</p>
         </div>
       </section>
 
@@ -15,7 +15,6 @@ export default function Pricing() {
         <div className="container">
           <div className={styles.pricingGrid}>
             <div className={styles.pricingCard}>
-              <div className={styles.cardBadge}>Most Popular</div>
               <h2>The Complete Package</h2>
               <div className={styles.price}>
                 <span className={styles.currency}>$</span>

@@ -7,7 +7,7 @@ export default function About() {
       <section className={styles.hero}>
         <div className="container">
           <h1>About High Rockies Web Design</h1>
-          <p>Building bold, modern websites that help High Rockies businesses thrive online</p>
+          <p>Building bold, modern websites that help small businesses and startups in High Rockies thrive online</p>
         </div>
       </section>
 
@@ -17,16 +17,16 @@ export default function About() {
             <div>
               <h2>Our Story</h2>
               <p>
-                We started High Rockies Web Design with a simple belief: building a website shouldn't be expensive or complicated.
+                We started High Rockies Web Design with a simple belief: small businesses shouldn't have to choose between an expensive website and no website at all.
               </p>
               <p>
-                Too many local businesses in High Rockies were paying thousands upfront for websites (often just bloated templates), then getting hit with endless change requests and support charges. It didn't have to be that way.
+                Too many local small businesses and startups in High Rockies were paying thousands upfront for websites (often just bloated templates), then getting hit with endless change requests and support charges. Meanwhile, other businesses had zero online presence. It didn't have to be that way.
               </p>
               <p>
-                We created a different model. A free custom website. Built with modern code, not templates. Flat-rate management. Real support. Simple.
+                We created a different model. A free custom website. Built with modern code, not templates. Affordable flat-rate management at $59/month. Real support from real people. Simple.
               </p>
               <p>
-                Now, dozens of High Rockies businesses have beautiful, custom-built, modern websites they own completely—while we handle all the technical stuff for $59/month. No templates. No bloat. Just fast, SEO-optimized sites that actually work. Everyone wins.
+                Now, dozens of High Rockies small businesses and startups have beautiful, custom-built, modern websites they own completely—while we handle all the technical stuff. No templates. No bloat. Just fast, SEO-optimized sites that actually work. Everyone wins.
               </p>
             </div>
             <div className={styles.storyImage}>
@@ -74,6 +74,12 @@ export default function About() {
               <div className={styles.valueIcon}>👨‍💼</div>
               <h3>Your Ownership</h3>
               <p>Your website is 100% yours. You own it, always. No lock-in, no dependencies.</p>
+            </div>
+
+            <div className={styles.valueCard}>
+              <div className={styles.valueIcon}>⏰</div>
+              <h3>Your Time Back</h3>
+              <p>Stop wasting hours on website builders, plugins, and hosting issues. We handle the technical work so you can focus on your business.</p>
             </div>
           </div>
         </div>

@@ -6,8 +6,8 @@ export default function Services() {
     <>
       <section className={styles.hero}>
         <div className="container">
-          <h1>Our Services</h1>
-          <p>Custom-built websites with modern technology. Not templates. Not bloated. Just smart, fast, SEO-optimized sites that work.</p>
+          <h1>Services for Small Businesses</h1>
+          <p>Custom-built websites designed to help small businesses and startups get online and grow. Not templates. Not bloated. Just smart, fast, SEO-optimized sites that actually work. Plus, you get your time back—no more wasting hours on website builders, plugins, and hosting headaches.</p>
         </div>
       </section>
 

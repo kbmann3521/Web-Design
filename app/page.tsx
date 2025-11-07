@@ -14,7 +14,7 @@ export default function Home() {
               Awaits
             </h1>
             <p className={styles.heroSubtitle}>
-              Get a stunning, custom website built for FREE. Then we'll manage it for just $59/month. 
+              Free custom website designed to help small businesses get online and grow. Then we'll manage it for just $59/month.
               That's it. No hidden fees. No headaches.
             </p>
             <div className={styles.heroButtons}>
@@ -32,7 +32,7 @@ export default function Home() {
       {/* Key Features */}
       <section className={styles.features}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>Why Choose Us?</h2>
+          <h2 className={styles.sectionTitle}>Built for Small Businesses</h2>
           <div className={styles.featuresGrid}>
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>✓</div>
@@ -47,12 +47,12 @@ export default function Home() {
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>✓</div>
               <h3>$59/Month Management</h3>
-              <p>Hosting, maintenance, updates, and unlimited free edits. Everything included.</p>
+              <p>Affordable for startups and small businesses. Hosting, maintenance, updates, and unlimited free edits. Everything included.</p>
             </div>
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}>✓</div>
-              <h3>No Work For You</h3>
-              <p>We handle everything. You just run your business.</p>
+              <div className={styles.featureIcon}>⏰</div>
+              <h3>No Hours Wasted on Technical Stuff</h3>
+              <p>Stop fiddling with website builders, plugins, and hosting settings. We handle everything so you can focus on what matters—your business.</p>
             </div>
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>✓</div>
@@ -110,9 +110,9 @@ export default function Home() {
       {/* CTA Section */}
       <section className={styles.ctaSection}>
         <div className="container">
-          <h2 className={styles.ctaTitle}>Ready to Get Started?</h2>
+          <h2 className={styles.ctaTitle}>Ready to Launch Your Business Online?</h2>
           <p className={styles.ctaSubtitle}>
-            No credit card required. No strings attached. Just a free custom website designed for your success.
+            Designed for small businesses and startups. No credit card required. No strings attached. Just a free custom website to help you grow.
           </p>
           <Link href="/#contact-form" className="btn btn-primary">
             Claim Your Free Website Now
@@ -125,10 +125,10 @@ export default function Home() {
         <div className="container">
           <div className={styles.contactWrapper}>
             <div>
-              <h2>Let's Build Something Bold</h2>
+              <h2>Let's Build Your Online Presence</h2>
               <p>
-                Tell us about your business and the website you're imagining.
-                You'll receive an email with your custom website in 24 hours or less.
+                Tell us about your small business and the website you're imagining. We'll design a custom site that helps you reach more customers.
+                You'll receive your custom website in 24 hours or less.
               </p>
             </div>
             <ContactForm />
