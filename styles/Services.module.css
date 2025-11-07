@@ -152,6 +152,47 @@
   border-right: none;
 }
 
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.comparisonCard {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(255, 0, 110, 0.08) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.comparisonCard h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.comparisonCardRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comparisonCardRow:last-child {
+  border-bottom: none;
+}
+
+.comparisonCardLabel {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.comparisonCardValue {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
 /* Wix Comparison Section */
 .wixSection {
   padding: 6rem 0;
@@ -335,24 +376,15 @@
   }
 
   .comparisonTable {
-    overflow-x: auto;
-  }
-
-  .tableRow {
-    grid-template-columns: 1fr;
-  }
-
-  .tableCell {
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  .tableCell:last-child {
-    border-bottom: none;
+    display: none;
   }
 
   .comparisonSection {
     padding: 3rem 0;
+  }
+
+  .comparisonGrid {
+    display: grid;
   }
 
   .wixSection {

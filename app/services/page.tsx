@@ -147,6 +147,92 @@ export default function Services() {
               <div className={styles.tableCell}>Optimized for Google rankings</div>
             </div>
           </div>
+
+          <div className={styles.comparisonGrid}>
+            <div className={styles.comparisonCard}>
+              <h3>Design Cost</h3>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>Traditional Agency:</div>
+                <div className={styles.comparisonCardValue}>$3,000 - $15,000</div>
+              </div>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>High Rockies:</div>
+                <div className={styles.comparisonCardValue}>FREE</div>
+              </div>
+            </div>
+
+            <div className={styles.comparisonCard}>
+              <h3>Ongoing Support</h3>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>Traditional Agency:</div>
+                <div className={styles.comparisonCardValue}>Extra fees per change</div>
+              </div>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>High Rockies:</div>
+                <div className={styles.comparisonCardValue}>Unlimited</div>
+              </div>
+            </div>
+
+            <div className={styles.comparisonCard}>
+              <h3>Hosting</h3>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>Traditional Agency:</div>
+                <div className={styles.comparisonCardValue}>Extra per month</div>
+              </div>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>High Rockies:</div>
+                <div className={styles.comparisonCardValue}>Included</div>
+              </div>
+            </div>
+
+            <div className={styles.comparisonCard}>
+              <h3>Accessibility</h3>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>Traditional Agency:</div>
+                <div className={styles.comparisonCardValue}>Email only</div>
+              </div>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>High Rockies:</div>
+                <div className={styles.comparisonCardValue}>Call anytime</div>
+              </div>
+            </div>
+
+            <div className={styles.comparisonCard}>
+              <h3>Ownership</h3>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>Traditional Agency:</div>
+                <div className={styles.comparisonCardValue}>Agency manages everything</div>
+              </div>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>High Rockies:</div>
+                <div className={styles.comparisonCardValue}>100% yours</div>
+              </div>
+            </div>
+
+            <div className={styles.comparisonCard}>
+              <h3>Technology</h3>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>Traditional Agency:</div>
+                <div className={styles.comparisonCardValue}>Templates + plugins (bloated)</div>
+              </div>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>High Rockies:</div>
+                <div className={styles.comparisonCardValue}>Custom-built code (lightweight & fast)</div>
+              </div>
+            </div>
+
+            <div className={styles.comparisonCard}>
+              <h3>SEO & Performance</h3>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>Traditional Agency:</div>
+                <div className={styles.comparisonCardValue}>Generic templates hurt rankings</div>
+              </div>
+              <div className={styles.comparisonCardRow}>
+                <div className={styles.comparisonCardLabel}>High Rockies:</div>
+                <div className={styles.comparisonCardValue}>Optimized for Google rankings</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
